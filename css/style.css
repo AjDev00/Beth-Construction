@@ -22,6 +22,134 @@ body {
   line-height: 1.7;
   color: gray;
   background: #fff;
+  overflow-x: hidden;
+}
+
+#colorlib-services {
+  background: linear-gradient(135deg, #86acd1, #bcd6f2);
+  padding: 60px 0;
+}
+
+#colorlib-services h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+
+#colorlib-services p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #333;
+  font-size: 16px;
+}
+
+.hero-subtitle {
+  color: #86acd1;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  max-width: 500px; /* keep readable width */
+  line-height: 1.2;
+}
+
+.hero-text {
+  color: #f1f1f1;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.hero-text span {
+  color: #86acd1;
+  font-weight: 600;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #86acd1;
+  border: 1px solid #86acd1;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #6d97be;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #86acd1;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: #86acd1;
+  color: #fff;
+}
+
+.services {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.services:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #86acd1;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+}
+
+.services h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.services p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
 }
 
 #page {
@@ -337,6 +465,7 @@ figure {
   width: 100%;
   float: left;
 }
+
 #colorlib-hero .btn {
   font-size: 24px;
 }
@@ -528,9 +657,31 @@ figure {
 #colorlib-intro {
   padding-top: 7em;
   padding-bottom: 0;
+  display: none;
 }
+@media screen and (max-width: 768px) {
+  #colorlib-intro {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #colorlib-services-desktop {
+    display: none;
+  }
+}
+
+#colorlib-services-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #colorlib-services-mobile {
+    display: block;
+  }
+}
+
 #colorlib-intro .box {
-  background: #86acd1;
   width: 80%;
   margin: 10px auto 0 auto;
   padding: 2em 0;
@@ -546,15 +697,15 @@ figure {
   color: #fff;
 }
 #colorlib-intro .box .num {
-  font-size: 120px;
+  font-size: 90px;
   color: #fff;
   font-weight: 700;
   line-height: 120px;
 }
 #colorlib-intro .box .yr {
   text-transform: uppercase;
-  font-size: 40px;
-  letter-spacing: 7px;
+  font-size: 20px;
+  letter-spacing: 4px;
 }
 #colorlib-intro .box .thin {
   font-size: 18px;
@@ -588,24 +739,35 @@ figure {
 }
 
 .services {
-  margin-bottom: 60px;
-  position: relative;
+  /* margin-bottom: 60px;
+  position: relative; */
+  display: flex;
+  flex-direction: column;
+  /* background-color: white; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
 }
 .services .icon {
-  line-height: 64px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.services .icon i {
-  font-size: 50px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: white;
   color: #86acd1;
 }
+.services .icon i {
+  font-size: 35px;
+  color: black;
+}
 .services .desc {
-  padding-left: 75px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 40px;
 }
 .services .desc h3 {
-  line-height: 34px;
+  /* line-height: 34px; */
+  white-space: normal;
 }
 
 #colorlib-project {
@@ -1393,9 +1555,8 @@ input[type="text"] {
 }
 
 #colorlib-footer {
-  background: #1e2022;
-  margin-left: -100px;
-  color: rgba(255, 255, 255, 0.6) !important;
+  background: #86acd1;
+  color: black !important;
 }
 #colorlib-footer .colorlib-footer-links {
   padding: 0;
