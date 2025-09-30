@@ -942,14 +942,16 @@ figure {
   height: 500px;
 }
 .project .desc {
-  background: #fff;
+  /* background: #fff; */
   padding: 2em;
+  margin-top: -240px;
+  margin-left: -140px;
 }
 .project .desc p {
   margin-bottom: 0;
   color: gray;
 }
-.project .desc h3 {
+.project .desc h5 {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 700;
@@ -957,6 +959,7 @@ figure {
   padding-left: 70px;
   line-height: 28px;
   display: block;
+  color: white;
 }
 .project .desc h3 span {
   position: absolute;
@@ -1578,12 +1581,12 @@ input[type="text"] {
   font-size: 13px;
 }
 #colorlib-footer .colorlib-footer-links li a {
-  color: rgba(255, 255, 255, 0.9);
+  color: black;
   text-decoration: none;
 }
 #colorlib-footer .colorlib-footer-links li a i {
   padding-right: 10px;
-  color: #86acd1;
+  color: black;
 }
 #colorlib-footer .colorlib-footer-links li a:hover {
   text-decoration: underline;
@@ -1598,7 +1601,7 @@ input[type="text"] {
 #colorlib-footer h4 {
   margin-bottom: 30px;
   font-size: 13px;
-  color: #e6e6e6;
+  color: black;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 700;
